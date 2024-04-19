@@ -5,5 +5,5 @@ all: respatcher.cpp
 	/usr/bin/clang++ -arch arm64 -Os respatcher.cpp -o respatcher_arm
 	# Kombiniere die beiden ausführbaren Dateien zu einem Universal Binary
 	lipo -create respatcher_intel respatcher_arm -output respatcher
-	# Optional: Entferne die Zwischendateien
+	## Optional: Entferne die Zwischendateien
 	rm respatcher_intel respatcher_arm
