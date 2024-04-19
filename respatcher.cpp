@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 		return 0;
 	}
 	int x=strtol(argv[1],0,10), y=strtol(argv[2],0,10);
-	string filename=string(getenv("HOME")) +"/.config/runesoft/robinhood/Profiles";
+	string filename=string(getenv("HOME")) +"/Desktop/robinhood/Profiles";
 
 	if(FILE* f = fopen(filename.c_str(), "r+b")) {
 		//read file
@@ -29,6 +29,6 @@ int main(int argc, char *argv[])
 		fclose(f);
 		printf("Resolution set to %dx%d\n",x,y);
 	} else {
-		cout << "File "+filename+" not found. Make sure you have a savefile in ~/.config/runesoft/robinhood/Profiles\n";
+		cout << "File "+filename+" not found. Make sure you have a savefile in ~/Desktop/robinhood/Profiles\n";
 	}
 }
